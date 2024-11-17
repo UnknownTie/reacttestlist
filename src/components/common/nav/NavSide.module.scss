@@ -1,0 +1,40 @@
+
+@import '/src/styles/colors'; 
+
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  background-color: darken($colorBg , 5);
+
+  .tabs {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row; /* 가로가 아닌 세로로 정렬 */
+    box-sizing: border-box; 
+    :hover{
+      text-decoration: underline;
+      background-color: darken($colorBg , 30);
+    }
+  
+    .tab {
+      color: $colorTxt;
+      display: flex; /* Flexbox로 내부 요소 정렬 */
+      height: 50px;
+      align-items: center; /* 세로 중앙 정렬 */
+      justify-content: center; /* 가로 중앙 정렬 */
+      padding: 10px;
+      cursor: pointer;
+      text-decoration: none;
+
+    }
+
+  }
+  
+  
+}
+

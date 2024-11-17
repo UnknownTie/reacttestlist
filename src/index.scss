@@ -1,0 +1,15 @@
+
+//초기화 s
+ //에릭 마이어( 기본 스타일의 대부분을 제거)
+ @import "./styles/reset.css";
+ // normalize는 브라우저마다 일관되지 않는 스타일링만 제거
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'); 
+
+ @import "./styles/reset.scss";
+
+ //기본 설정 , 배경 및 색상 등...
+ @import "./styles/baseset.scss";
+
+ //mk,md 표시 github 스타일 적용
+ @import 'github-markdown-css/github-markdown.css';
+

@@ -1,0 +1,90 @@
+
+@import './colors'; 
+
+.App{
+  background-color: $colorBg;
+  color: $colorTxt;
+  flex-direction: column;
+}
+
+.header {
+  height: 50px;
+}
+//-=
+
+.main{
+  display: flex;
+  height: calc(100vh - 50px);
+  flex-direction: column;
+
+  .tabbar {
+    height: 50px;
+    background-color:  darken($colorBg, 50); 
+
+    .tabs {
+      align-items: center; /* 가운데 정렬 */
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: row; /* 세로로 정렬 */
+      :hover{
+        background-color: darken($colorBg , 20);
+        text-decoration: underline;
+      }
+    
+      .tab {
+        display: flex;
+        align-items: center; /* 세로 중앙 정렬 */
+        justify-content: center; /* 가로 중앙 정렬 */
+        height: 100%;
+        color: lighten($colorBg, 50); 
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      height: 40px;
+    }
+  }
+
+  .container {
+  display: flex;
+  flex-direction: row;
+  background-color: $colorBg;
+
+    .item {
+      width: 75%;
+      overflow: auto;
+    }
+
+    .nav {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+		.container {
+			flex-direction: column; /* nav를 아래로 이동 */
+      .nav {
+				width: 100%; 
+				order: 0; /* item 위로 */
+				flex: 1;
+        overflow: auto;
+			}
+			.item {
+        order: 100; 
+				width: 100%;
+				height: 70%; /* 높이 설정 */
+        overflow: auto;
+			}
+		}
+	}
+
+}
+
+
+
