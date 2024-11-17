@@ -1,0 +1,12 @@
+<script type="text/javascript">
+
+  if (window.location.pathname !== '/404.html') {
+    //현재 들어온 주소를 전달
+		window.location.replace('/reacttestlist/index.html?redirect=' + encodeURIComponent(window.location.pathname) );
+  } else {
+    alert("페이지 연결 실패\n url 주소 확인 필요");
+    setTimeout(function() {
+      window.location.replace('/reacttestlist/index.html');
+    }, 1000); // 1초 후에 리디렉션
+  }
+</script>
